@@ -1,3 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
-    background-color: black;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ads-banner {
+    min-height: 45px;
+    padding: 10px 30px;
+    background: linear-gradient(45deg, #f2295bff, #ff7373ff);
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+.ads-banner__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+
+.header {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    
+}
+.nav__item {
+    padding: 16px 18px;
+    font-size: 17px;
+}
+
+.nav__item:nth-child(-n+3)::after {
+    content: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg fill="%23000000" width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M24 11.305l-7.997 11.39L8 11.305z"/></svg>');
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+.nav__item:nth-child(5)::after {
+    content: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg fill="%23000000" width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M24 11.305l-7.997 11.39L8 11.305z"/></svg>');
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.search {
+    position: relative;
+}
+
+.search::after {
+    content: "⌘ ﹢ K";
+    height: 20px;
+    border-radius: 5px;
+    padding: 2px 7px 0px 7px;
+    color: #fff;
+    font-size: 12px;
+    background-color: #414141;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+
+}
+
+.search__input {
+    width: 240px;
+    height: 40px;
+    border-radius: 5px;
+    background: #d9d9d9;
+    border: solid 1px #c7c7c7;
+    padding-left: 35px;
+    font-size: 18px;
+}
+
+.button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search__button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: no-repeat center top;
+    background-image: url('data:image/svg+xml,<svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="%23000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>');
+    width: 20px;
+    height: 20px;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .header__nav {
+        display: none;
+    }
+    .mobile-nav {
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 525px) {
+    .mobile-nav {
+        width: 70px;
+    }
+    .button__search-popup {
+        margin-left: 5px;
+    }
+    .button__mobile-menu {
+        margin-left: 5px;
+    }
 }
