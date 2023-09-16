@@ -33,6 +33,7 @@ body {
 }
 
 .header {
+    max-width: 1640px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -151,8 +152,36 @@ body {
 }
 
 .button-learn {
-    margin-right: 30px;
+    margin-right: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 6px;
+    background-color: #37366f;
+    border: solid 2px #37366f;
 }
+
+.button-learn::after {
+    vertical-align: middle;
+    padding-left: 8px;
+    content: url('data:image/svg+xml,<svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="%23000000" stroke="%23000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><g id="Complete"><g id="arrow-right"><g><polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><line fill="none" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line></g></g></g></g></svg>');
+}
+
+.button-templates {
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: solid 2px #cdcdcd;
+}
+
+.button-templates::after {
+    vertical-align: middle;
+    padding-left: 8px;
+    content: url('data:image/svg+xml,<svg fill="%23000000" width="20px" height="20px" viewBox="0 0 24 24" id="right-arrow" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M21.71,11.29l-3-3a1,1,0,0,0-1.42,1.42L18.59,11H3a1,1,0,0,0,0,2H18.59l-1.3,1.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l3-3A1,1,0,0,0,21.71,11.29Z" style="fill: %23000000;"></path></g></svg>');
+}
+
 
 @media (max-width: 1200px) {
     .header__nav {
