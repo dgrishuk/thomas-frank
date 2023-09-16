@@ -25,12 +25,15 @@ body {
     white-space: nowrap;
 }
 
-.header {
+.section {
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
-    height: 60px;
     padding: 0 20px;
+}
+
+.header {
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -115,6 +118,40 @@ body {
 
 .mobile-nav {
     display: none;
+}
+
+
+.block-greating {
+    display: flex;
+}
+
+.block-greating__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    min-height: 600px;
+    margin: 30px;
+}
+
+.main-title {
+    font-size: 70px;
+}
+
+.main-text {
+    font-size: 24px;
+}
+
+.block-greating__foto {
+    width: 100%;
+    background-color: black;
+    border-radius: 20px;
+    margin: 30px;
+}
+
+.button-learn {
+    margin-right: 30px;
 }
 
 @media (max-width: 1200px) {
