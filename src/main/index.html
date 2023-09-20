@@ -8,17 +8,10 @@
 <body>
   <div class="ads-banner">I just launched a new Notion template: <a class="ads-banner__link" href="#">🧠 Ultimate Brain.</a></div>
   <header class="section-content header">
-    
-    <div style="display: flex; align-items: center; border: 1px rgb(184, 184, 184) solid;">
-      <div style="background-color: black; width: 50px; height: 50px; border-radius: 50%; margin-right: 20px;"></div>
-      <div style="width: 200px; height: 15px; background-color: black;"></div>
-    </div>
-    <!--
     <a href="#" class="logo">
-      <img src="./assets/logo-photo.png" class="logo__photo" alt="Photo Thomas Frank">
-      <img src="./assets/logo-text.webp" class="logo__name" alt="Logo Thomas Frank">
+      <img class="logo__photo" alt="Photo Thomas Frank" height="50px" src=<%=require("../assets/logo-photo.png")%> />
+      <img class="logo__name" alt="Logo Thomas Frank" height="15px" src=<%=require("../assets/logo-text.webp")%> />
     </a>
-    -->
     <nav class="header__nav">
       <ul class="nav">
         <li class="nav__item">About</li>
@@ -52,17 +45,22 @@
           <button class="button button-templates">Notion Templates</button>  
         </div>
       </div>      
-      <div class="block-greating__foto"></div>
+      <div class="wrapper-main-photo">
+        <img class="block-greating__photo" alt="Main photo Thomas Frank" src=<%=require("../assets/Thomas-Frank-Headshot-2021.jpg.webp")%> />
+      </div>
     </section>
     <section class="block-featured">
       <h3 class="featured-title">Featured on:</h3>
-      <div class="featured-logo"></div>
+      <picture>
+        <source media="(max-width: 770px)" srcset=<%=require("../assets/Logorail-2023-feb-mobile.jpg.webp")%> />
+        <img class="featured-logo" alt="Logo featured company" src=<%=require("../assets/Logorail-2023-feb.jpg.webp")%> />
+      </picture>
     </section>
     <section class="block-start-learn">
       <h2 class="block-start-learn__title">Want to Learn Notion? Start Here.</h2>
       <div class="wrapp__block-videos">
         <div class="block-video">
-          <div class="cover"></div>
+          <img class="cover" src=<%=require("../assets/Course-Thumbnail-1536x864.jpg.webp")%> />
           <h3 class="title-video">
             <a href="#">Notion Fundamentals: The Complete Notion Beginner’s Guide</a>
           </h3>
@@ -71,14 +69,14 @@
           </p>
         </div>
         <div class="block-video">
-          <div class="cover"></div>
+          <img class="cover" src=<%=require("../assets/Notion-Databases-Complete-Beginners-Course-Thomas-Frank.webp")%> />
           <h3 class="title-video">
             <a href="#">Notion Databases: Complete Course for Beginners</a>
           </h3>
           <p class="description-video">Databases are extremely powerful in Notion, but they can also be confusing to newcomers. This free guide will teach you the ins and outs of database views, filters, sorts, properties, and more.</p>
         </div>
         <div class="block-video">
-          <div class="cover"></div>
+          <img class="cover" src=<%=require("../assets/The-Notion-Formula-Cheat-Sheet-2022-Thomas-Frank-1536x864.jpg.webp")%> />
           <h3 class="title-video">
             <a href="#">Notion Formulas: The Ultimate Reference Guide</a>
           </h3>
@@ -92,7 +90,7 @@
       <h2 class="block-templates__title">Notion Templates: Level-Up Your Notion Workspace</h2>
       <div class="wrap_card">
         <div class="card-templates">
-          <div class="cover-templates"></div>
+          <img class="cover-templates" alt="Main photo Thomas Frank" src=<%=require("../assets/Video-Demo-Thumbnail.jpg.webp")%> />
           <h3 class="title-templates">
             <a href="#">Ultimate Brain – The All-in-1 Productivity System & Second Brain for Notion</a>
           </h3>
@@ -104,7 +102,7 @@
           </p>
         </div>
         <div class="card-templates">
-          <div class="cover-templates"></div>
+          <img class="cover-templates" alt="Main photo Thomas Frank" src=<%=require("../assets/Marketing-Video-Thumbnail.jpg.webp")%> />
           <h3 class="title-templates">
             <a href="#">Creator’s Companion – The Ultimate Planning System for Serious Content Creators</a>
           </h3>
@@ -132,20 +130,26 @@
     </section>
     <section class="block-about">
       <h2 class="block-about__title">About Thomas</h2>
-      <div class="wrap-about-text">
-        <p>Thomas Frank is a <a href="#">YouTuber</a>, <a href="#">author</a>, <a href="#">musician</a>, and <a href="#">entrepreneur</a> who has been helping students and professionals be more productive since 2010.</p>
-        <p>Thomas’ <a href="#">main YouTube channel</a> has garnered over 2.9 million subscribers and more than 170 million views, covering topics in self-improvement – ranging from effective studying learning, productivity, personal finance, and fitness.</p>
-        <p>His second channel, <a href="#">Thomas Frank Explains</a>, is the world’s largest Notion education channel with more than 170,000 subscribers. Thomas holds a <a href="#">Notion certification</a>, and is the author of the web’s most comprehensive <a href="#">Notion formula reference</a>.</p>
-        <p>Thomas is also a co-founder of <a href="#">Nebula</a>, a creator-owned streaming service with over 650,000 active users. Nebula’s <a href="#">talent division</a> also represents over 150 creators, helping to build a stable “middle class” for the creator economy and working with brands like Brilliant, Audible, and Fender.</p>
-        <p>He has been featured on <i>Business Insider, The Information,</i>Lewis Howes’ <i>The School of Greatness</i>, The Wall Street Journal, U.S. News, and Smart Passive Income; he also gives talks on succeeding in the creator economy at events including VidCon and ViSummit.</p>
-        <p>In his free time, Thomas is a guitarist, singer, and avid Magic: The Gathering player.</p>
+      <div class="about-wrap">
+        <div class="wrap-about-text">
+          <p>Thomas Frank is a <a href="#">YouTuber</a>, <a href="#">author</a>, <a href="#">musician</a>, and <a href="#">entrepreneur</a> who has been helping students and professionals be more productive since 2010.</p>
+          <p>Thomas’ <a href="#">main YouTube channel</a> has garnered over 2.9 million subscribers and more than 170 million views, covering topics in self-improvement – ranging from effective studying learning, productivity, personal finance, and fitness.</p>
+          <p>His second channel, <a href="#">Thomas Frank Explains</a>, is the world’s largest Notion education channel with more than 170,000 subscribers. Thomas holds a <a href="#">Notion certification</a>, and is the author of the web’s most comprehensive <a href="#">Notion formula reference</a>.</p>
+          <p>Thomas is also a co-founder of <a href="#">Nebula</a>, a creator-owned streaming service with over 650,000 active users. Nebula’s <a href="#">talent division</a> also represents over 150 creators, helping to build a stable “middle class” for the creator economy and working with brands like Brilliant, Audible, and Fender.</p>
+          <p>He has been featured on <i>Business Insider, The Information,</i>Lewis Howes’ <i>The School of Greatness</i>, The Wall Street Journal, U.S. News, and Smart Passive Income; he also gives talks on succeeding in the creator economy at events including VidCon and ViSummit.</p>
+          <p>In his free time, Thomas is a guitarist, singer, and avid Magic: The Gathering player.</p>
+        </div>
+        <div class="wrap-about-img">
+          <img class="about-img" alt="Main photo Thomas Frank" src=<%=require("../assets/Thomas-Frank-VidCon-Speaking-Photo.jpg.webp")%> />
+        </div>
       </div>
-      <div class="about-img"></div>
     </section>
     <section class="block-interviews">
       <h3 class="block-interviews__title">Featured interviews:</h3>
       <div class="wrap-interviews">
-        <div class="interviews-img"></div>
+        <div class="wrap-interviews-img">
+          <img class="interviews-img" alt="Main photo Thomas Frank" src=<%=require("../assets/Interview-Collage-2x.png.webp")%> />
+        </div>
         <ul class="list-interviews">
           <li class="item-interviews"><nobr>Lewis Howes – The School of Greatness</nobr></li>
           <li class="item-interviews"><nobr>Matt D’Avella – The Ground Up Show</nobr></li>
@@ -159,27 +163,27 @@
       <h2 class="block-link-content__title">Connect with Me</h2>
       <div class="wrap-link-content">
         <a class="block-link">
-          <div class="logo-img"></div>
+          <img alt="Logo YouTube" class="youtube-logo">
           <span class="link-title">Thomas Frank</span>
           <span class="link-subtitle">2.9 million subscribers</span>
         </a>
         <a class="block-link">
-          <div class="logo-img"></div>
+          <img alt="Logo YouTube" class="youtube-logo">
           <span class="link-title">Thomas Frank Explains</span>
           <span class="link-subtitle">180,000 subscribers</span>
         </a>
         <a class="block-link">
-          <div class="logo-img"></div>
+          <img alt="Logo Twitter" class="twitter-logo">
           <span class="link-title">Thomas Frank</span>
           <span class="link-subtitle">131,000 followers</span>
         </a>
         <a class="block-link">
-          <div class="logo-img"></div>
+          <img alt="Logo Nebula" class="nebula-logo">
           <span class="link-title">Nebula</span>
           <span class="link-subtitle">Ad-free videos</span>
         </a>
         <a class="block-link">
-          <div class="logo-img"></div>
+          <img alt="Logo Spotify" class="spotify-img">
           <span class="link-title">Spotify</span>
           <span class="link-subtitle">Study music & more</span>
         </a>
