@@ -1,3 +1,33 @@
+@import '~normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700;900&display=swap');
+
+:root {
+    --color-promo: linear-gradient(230deg,#FF7373 0%,#f2295b 100%);
+    --color-foreground: #000;
+    --color-foreground-secondary: #515151;
+    /* --color-foreground-secondary-active: #8b8a8a26; */
+    /* --color-foreground-button: #444; */
+    /* --color-foreground-button-active: #000; */
+    --color-foreground-alt: #fff;
+    /* --color-background: #fff; */
+    --color-background-alt: #000;
+    /* --color-background-button: #eee; */
+    /* --color-background-button-active: #ddd; */
+    --color-background-accent: #37366f;
+    /* --color-background-accent-active: #53528b; */
+    /* --color-border: #eee; */
+    --color-border-bold: #cdcdcd;
+    --color-subtitle: #808080;
+    --color-link: #ff6347;
+    --color-background-footer: #1c262f;
+
+    --search-background: #414141;
+    /* --search-shadow: inset 0 0 4px rgba(0, 0, 0, .25); */
+    /* --search-color: rgb(65, 65, 65); */
+    /* --search-shortcut-background: rgb(65, 65, 65); */
+    /* --search-shortcut-color: #fff; */
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -6,19 +36,19 @@
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .ads-banner {
     min-height: 45px;
     padding: 10px 30px;
-    background: linear-gradient(45deg, #f2295bff, #ff7373ff);
-    color: #fff;
+    background: var(--color-promo);
+    color: var(--color-foreground-alt);
     text-align: center;
     font-size: 18px;
 }
 .ads-banner__link {
-    color: #fff;
+    color: var(--color-foreground-alt);
     text-decoration: none;
     font-weight: bold;
     margin-left: 5px;
@@ -61,25 +91,48 @@ body {
     cursor: pointer;
     display: flex;
     align-items: baseline;
-    
+    height: 50px;
+    position: relative;
 }
+
 .nav__item {
     padding: 16px 18px;
     font-size: 17px;
 }
 
-.nav__item:nth-child(-n+3)::after {
-    content: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg fill="%23000000" width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M24 11.305l-7.997 11.39L8 11.305z"/></svg>');
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 3px;
+.nav__item:hover {
+    border-bottom: solid 3px var(--color-foreground);
 }
 
-.nav__item:nth-child(5)::after {
-    content: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg fill="%23000000" width="20px" height="20px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M24 11.305l-7.997 11.39L8 11.305z"/></svg>');
+.nav__item:nth-child(-n+3)::after {
+    content: "⏷";
     display: inline-block;
     vertical-align: middle;
     margin-left: 5px;
+ }
+
+.nav__item:nth-child(5)::after {
+    content: "⏷";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.nav__sub-menu {
+    position: absolute;
+    width: 100%;
+    background-color: var(--color-foreground-alt);
+    border-radius: 5px;
+    border: solid 1px var(--color-foreground-secondary);
+    top: 57px;
+    left: 0;
+    padding: 24px 16px;
+    visibility: hidden;
+    list-style: none;
+}
+
+.nav__item:hover .nav__sub-menu {
+    visibility: visible;
 }
 
 .search {
@@ -88,12 +141,11 @@ body {
 
 .search::after {
     content: "⌘ ﹢ K";
-    height: 20px;
     border-radius: 5px;
-    padding: 2px 7px 0px 7px;
-    color: #fff;
+    padding: 3px 7px 3px 7px;
+    color: var(--color-foreground-alt);
     font-size: 12px;
-    background-color: #414141;
+    background-color: var(--search-background);
     position: absolute;
     top: 9px;
     right: 10px;
@@ -114,6 +166,8 @@ body {
     border: none;
     background: transparent;
     cursor: pointer;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .search__button {
@@ -147,6 +201,7 @@ body {
 
 .main-title {
     font-size: 70px;
+    font-weight: 900;
 }
 
 .main-text {
@@ -156,6 +211,8 @@ body {
 .wrapper-main-photo {
     width: 100%;
     padding: 30px;
+    display: flex;
+    align-items: center;
 }
 .block-greating__photo {
     border-radius: 20px;
@@ -167,17 +224,16 @@ body {
     padding: 10px 25px;
     font-size: 16px;
     font-weight: bold;
-    color: #fff;
+    color: var(--color-foreground-alt);
     border-radius: 6px;
-    background-color: #37366f;
-    border: solid 2px #37366f;
+    background-color: var(--color-background-accent);
+    border: solid 2px var(--color-background-accent);
     margin-bottom: 20px;
 }
 
 .button-learn::after {
     vertical-align: middle;
-    padding-left: 8px;
-    content: url('data:image/svg+xml,<svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="%23000000" stroke="%23000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><g id="Complete"><g id="arrow-right"><g><polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><line fill="none" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line></g></g></g></g></svg>');
+    content: ' ➜';
 }
 
 .button-templates {
@@ -185,20 +241,19 @@ body {
     font-size: 16px;
     font-weight: bold;
     border-radius: 6px;
-    border: solid 2px #cdcdcd;
+    border: solid 2px var(--color-border-bold);
 }
 
 .button-templates::after {
     vertical-align: middle;
-    padding-left: 8px;
-    content: url('data:image/svg+xml,<svg fill="%23000000" width="20px" height="20px" viewBox="0 0 24 24" id="right-arrow" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="primary" d="M21.71,11.29l-3-3a1,1,0,0,0-1.42,1.42L18.59,11H3a1,1,0,0,0,0,2H18.59l-1.3,1.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l3-3A1,1,0,0,0,21.71,11.29Z" style="fill: %23000000;"></path></g></svg>');
+    content: ' ➜';
 }
 
 .block-featured {
     margin-bottom: 50px;
 }
 .featured-title {
-    color: gray;
+    color: var(--color-subtitle);
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -223,6 +278,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    font-weight: 900;
     font-size: 28px;
 }
 
@@ -237,14 +293,14 @@ body {
 }
 
 .cover {
-    background-color: #000;
+    background-color: var(--color-foreground);
     width: 100%;
     margin-bottom: 30px;
 }
 
 .title-video > a {
     text-decoration: none;
-    color: #000;
+    color: var(--color-foreground);
     display: inline-block;
     margin-bottom: 20px;
     font-size: 22px;
@@ -263,6 +319,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    font-weight: 900;
     font-size: 28px;
 }
 
@@ -279,14 +336,14 @@ body {
 }
 
 .cover-templates {
-    background-color: black;
+    background-color: var(--color-foreground);
     width: 100%;
     margin-bottom: 30px;
 }
 
 .title-templates > a {
     text-decoration: none;
-    color: #000;
+    color: var(--color-background-alt);
     display: inline-block;
     margin-bottom: 25px;
     font-size: 22px;
@@ -315,6 +372,7 @@ body {
 }
 .block-subscribe__title {
     text-align: center;
+    font-weight: 900;
     font-size: 28px;
 }
 
@@ -331,7 +389,7 @@ body {
 .input-form {
     width: 100%;
     height: 60px;
-    border: solid 1px black;
+    border: solid 1px var(--color-background-alt);
     border-radius: 10px;
     padding-left: 20px;
     font-size: 18px;
@@ -341,9 +399,9 @@ body {
 
 .button-form {
     height: 60px;
-    background-color: #37366f;
-    color: #fff;
-    border: solid 2px #37366f;
+    background-color: var(--color-background-accent);
+    color: var(--color-foreground-alt);
+    border: solid 2px var(--color-background-accent);
     border-radius: 10px;
     font-weight: bold;
     font-size: 16px;
@@ -356,8 +414,7 @@ body {
 
 .button-form::after {
     vertical-align: middle;
-    padding-left: 8px;
-    content: url('data:image/svg+xml,<svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="%23000000" stroke="%23000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><g id="Complete"><g id="arrow-right"><g><polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline><line fill="none" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line></g></g></g></g></svg>');
+    content: ' ➜';
 }
 
 .block-about {
@@ -370,6 +427,7 @@ body {
 .block-about__title {
     margin-bottom: 30px;
     text-align: center;
+    font-weight: 900;
     font-size: 28px;
 }
 
@@ -398,7 +456,7 @@ body {
 
 .wrap-about-text > p > a {
     text-decoration: none;
-    color: tomato;
+    color: var(--color-link);
 }
 
 .wrap-about-img {
@@ -415,7 +473,7 @@ body {
 }
 
 .block-interviews__title {
-    color: grey;
+    color: var(--color-subtitle);
     margin: 60px 0 40px 0;
     text-align: center;
 }
@@ -450,6 +508,7 @@ body {
 .item-interviews {
     list-style: none;
     font-size: 18px;
+    white-space: nowrap;
 }
 
 .item-interviews::before {
@@ -468,6 +527,7 @@ body {
     margin-top: 60px;
     margin-bottom: 60px;
     text-align: center;
+    font-weight: 900;
     font-size: 28px;
 }
 
@@ -509,19 +569,19 @@ body {
 
 .link-title {
     font-weight: bold;
-    color: gray;
+    color: var(--color-subtitle);
     font-size: 18px;
     margin-bottom: 10px;
 }
 
 .link-subtitle {
-    color: gray;
+    color: var(--color-subtitle);
     font-size: 18px;
 }
 
 .footer {
     padding: 50px 50px 25px 50px;
-    background-color: #1c262f;
+    background-color: var(--color-background-footer);
     font-size: 15px;
 }
 
@@ -540,9 +600,13 @@ body {
     list-style-type: none;
 }
 
+.item-link--bold {
+    font-weight: bold;
+}
+
 .item-link {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-foreground-alt);
     display: inline-block;
     margin-bottom: 10px;
 }
@@ -551,7 +615,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: var(--color-foreground-alt);
     font-size: 12px;
     max-width: 900px;
     margin-top: 30px;
@@ -564,7 +628,7 @@ body {
 .copyright-info > * {
     display: inline-block;
     text-decoration: none;
-    color: #fff;
+    color: var(--color-foreground-alt);
 }
 
 .social-links {
@@ -607,8 +671,17 @@ body {
         display: flex;
         justify-content: space-between;
     }
+
+    .block-greating__text {
+        justify-content: space-between;
+    }
+
     .main-title {
-        font-size: 60px;
+        font-size: 50px;
+    }
+
+    .main-text {
+        font-size: 20px;
     }
 }
 
@@ -747,4 +820,12 @@ body {
         margin-top: 10px;
         height: 60px;
     }
+}
+
+
+.svg-sprite {
+    fill: #000;
+    width: 50px;
+    height: 50px;
+    background-color: gray;
 }

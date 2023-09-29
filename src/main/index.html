@@ -4,25 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thomas Frank – YouTuber, Notion Nerd, Entrepreneur</title>
+  <link rel="preload" href="./assets/Thomas-Frank-Headshot-2021.jpg.webp" as="image">
 </head>
 <body>
   <div class="ads-banner">I just launched a new Notion template: <a class="ads-banner__link" href="#">🧠 Ultimate Brain.</a></div>
   <header class="section-content header">
     <a href="#" class="logo">
-      <img class="logo__photo" alt="Photo Thomas Frank" height="50px" src=<%=require("../assets/logo-photo.png")%> />
-      <img class="logo__name" alt="Logo Thomas Frank" height="15px" src=<%=require("../assets/logo-text.webp")%> />
+      <img class="logo__photo" alt="Photo Thomas Frank" height="36px" src=<%=require("./assets/logo-photo.png")%> />
+      <img class="logo__name" alt="Logo Thomas Frank" height="15px" src=<%=require("./assets/logo-text.webp")%> />
     </a>
     <nav class="header__nav">
       <ul class="nav">
-        <li class="nav__item">About</li>
+        <li class="nav__item">
+          About
+          <ul class="nav__sub-menu">
+            <li class="sub-menu__item">
+              <a href="">
+                <i>Image</i>
+                <strong>About me</strong>
+                <p>My projects, philosophy, and contact info.</p>
+              </a>
+            </li>
+            <li class="sub-menu__item"></li>
+          </ul>
+        </li>
         <li class="nav__item">Learn Notion</li>
         <li class="nav__item">Notion Templates</li>
         <li class="nav__item">Courses</li>
         <li class="nav__item">Blog</li>
       </ul>
       <form class="search" action="#">
-        <input class="search__input" type="text" id="fname" placeholder="Search">
-        <input class="button search__button" type="submit" value="">
+        <input class="search__input" type="search" placeholder="Search">
+        <button class="button search__button" type="submit"></button>
       </form>
     </nav>
     <div class="mobile-nav">
@@ -38,29 +51,29 @@
     <section class="block-greating">
       <div class="block-greating__text">
         <h1 class="main-title">Hello There!<br>I'm Thomas Frank.</h1>
-        <span class="main-text">I’m an author, YouTuber, and Notion expert.</span>
-        <span class="main-text">I create in-depth <b>tutorials</b> and <b>templates</b> for Notion that help people be more productive and organized.</span>
+        <p class="main-text">I’m an author, YouTuber, and Notion expert.</p>
+        <p class="main-text">I create in-depth <b>tutorials</b> and <b>templates</b> for Notion that help people be more productive and organized.</p>
         <div class="block-greating__button">
-          <button class="button button-learn">Learn Notion</button>
-          <button class="button button-templates">Notion Templates</button>  
+          <a class="button button-learn">Learn Notion</a>
+          <a class="button button-templates">Notion Templates</a>  
         </div>
       </div>      
       <div class="wrapper-main-photo">
-        <img class="block-greating__photo" alt="Main photo Thomas Frank" src=<%=require("../assets/Thomas-Frank-Headshot-2021.jpg.webp")%> />
+        <img class="block-greating__photo" alt="Main photo Thomas Frank" src=<%=require("./assets/Thomas-Frank-Headshot-2021.jpg.webp")%> />
       </div>
     </section>
     <section class="block-featured">
       <h3 class="featured-title">Featured on:</h3>
       <picture>
-        <source media="(max-width: 770px)" srcset=<%=require("../assets/Logorail-2023-feb-mobile.jpg.webp")%> />
-        <img class="featured-logo" alt="Logo featured company" src=<%=require("../assets/Logorail-2023-feb.jpg.webp")%> />
+        <source media="(max-width: 770px)" srcset=<%=require("./assets/Logorail-2023-feb-mobile.jpg.webp")%> />
+        <img class="featured-logo" alt="Logo featured company" src=<%=require("./assets/Logorail-2023-feb.jpg.webp")%> />
       </picture>
     </section>
     <section class="block-start-learn">
       <h2 class="block-start-learn__title">Want to Learn Notion? Start Here.</h2>
       <div class="wrapp__block-videos">
         <div class="block-video">
-          <img class="cover" src=<%=require("../assets/Course-Thumbnail-1536x864.jpg.webp")%> />
+          <img class="cover" src=<%=require("./assets/Course-Thumbnail-1536x864.jpg.webp")%> />
           <h3 class="title-video">
             <a href="#">Notion Fundamentals: The Complete Notion Beginner’s Guide</a>
           </h3>
@@ -69,14 +82,14 @@
           </p>
         </div>
         <div class="block-video">
-          <img class="cover" src=<%=require("../assets/Notion-Databases-Complete-Beginners-Course-Thomas-Frank.webp")%> />
+          <img class="cover" src=<%=require("./assets/Notion-Databases-Complete-Beginners-Course-Thomas-Frank.webp")%> />
           <h3 class="title-video">
             <a href="#">Notion Databases: Complete Course for Beginners</a>
           </h3>
           <p class="description-video">Databases are extremely powerful in Notion, but they can also be confusing to newcomers. This free guide will teach you the ins and outs of database views, filters, sorts, properties, and more.</p>
         </div>
         <div class="block-video">
-          <img class="cover" src=<%=require("../assets/The-Notion-Formula-Cheat-Sheet-2022-Thomas-Frank-1536x864.jpg.webp")%> />
+          <img class="cover" src=<%=require("./assets/The-Notion-Formula-Cheat-Sheet-2022-Thomas-Frank-1536x864.jpg.webp")%> />
           <h3 class="title-video">
             <a href="#">Notion Formulas: The Ultimate Reference Guide</a>
           </h3>
@@ -90,7 +103,7 @@
       <h2 class="block-templates__title">Notion Templates: Level-Up Your Notion Workspace</h2>
       <div class="wrap_card">
         <div class="card-templates">
-          <img class="cover-templates" alt="Main photo Thomas Frank" src=<%=require("../assets/Video-Demo-Thumbnail.jpg.webp")%> />
+          <img class="cover-templates" alt="Main photo Thomas Frank" src=<%=require("./assets/Video-Demo-Thumbnail.jpg.webp")%> />
           <h3 class="title-templates">
             <a href="#">Ultimate Brain – The All-in-1 Productivity System & Second Brain for Notion</a>
           </h3>
@@ -102,7 +115,7 @@
           </p>
         </div>
         <div class="card-templates">
-          <img class="cover-templates" alt="Main photo Thomas Frank" src=<%=require("../assets/Marketing-Video-Thumbnail.jpg.webp")%> />
+          <img class="cover-templates" alt="Main photo Thomas Frank" src=<%=require("./assets/Marketing-Video-Thumbnail.jpg.webp")%> />
           <h3 class="title-templates">
             <a href="#">Creator’s Companion – The Ultimate Planning System for Serious Content Creators</a>
           </h3>
@@ -140,7 +153,7 @@
           <p>In his free time, Thomas is a guitarist, singer, and avid Magic: The Gathering player.</p>
         </div>
         <div class="wrap-about-img">
-          <img class="about-img" alt="Main photo Thomas Frank" src=<%=require("../assets/Thomas-Frank-VidCon-Speaking-Photo.jpg.webp")%> />
+          <img class="about-img" alt="Main photo Thomas Frank" src=<%=require("./assets/Thomas-Frank-VidCon-Speaking-Photo.jpg.webp")%> />
         </div>
       </div>
     </section>
@@ -148,14 +161,14 @@
       <h3 class="block-interviews__title">Featured interviews:</h3>
       <div class="wrap-interviews">
         <div class="wrap-interviews-img">
-          <img class="interviews-img" alt="Main photo Thomas Frank" src=<%=require("../assets/Interview-Collage-2x.png.webp")%> />
+          <img class="interviews-img" alt="Main photo Thomas Frank" src=<%=require("./assets/Interview-Collage-2x.png.webp")%> />
         </div>
         <ul class="list-interviews">
-          <li class="item-interviews"><nobr>Lewis Howes – The School of Greatness</nobr></li>
-          <li class="item-interviews"><nobr>Matt D’Avella – The Ground Up Show</nobr></li>
-          <li class="item-interviews"><nobr>Pat Flynn - The Smart Passive Income Podcast</nobr></li>
-          <li class="item-interviews"><nobr>Sara Dietschy – That Creative Life</nobr></li>
-          <li class="item-interviews"><nobr>Jay Clouse - Creative Elements</nobr></li>
+          <li class="item-interviews">Lewis Howes – The School of Greatness</li>
+          <li class="item-interviews">Matt D’Avella – The Ground Up Show</li>
+          <li class="item-interviews">Pat Flynn - The Smart Passive Income Podcast</li>
+          <li class="item-interviews">Sara Dietschy – That Creative Life</li>
+          <li class="item-interviews">Jay Clouse - Creative Elements</li>
         </ul>
       </div>
     </section>
@@ -194,7 +207,7 @@
     <nav class="footer__nav">
       <ul class="nav-site-link">
         <li class="site-link__item">
-          <a class="item-link" href="#"><b>ThomasJFrank.com</b></a>
+          <a class="item-link item-link--bold" href="#">ThomasJFrank.com</a>
         </li>
         <li class="site-link__item">
           <a class="item-link" href="#">About Me</a>
@@ -210,8 +223,8 @@
         </li>
       </ul>
       <ul class="nav-learn-notion">
-        <li class="learn-notion__item">
-          <a class="item-link" href="#"><b>Learn Notion</b></a>
+        <li class="learn-notion__item item-link--bold">
+          <a class="item-link" href="#">Learn Notion</a>
         </li>
         <li class="learn-notion__item">
           <a class="item-link" href="#">Notion Databases</a>
@@ -224,8 +237,8 @@
         </li>
       </ul>
       <ul class="nav-notion-templates">
-        <li class="notion-templates__item">
-          <a class="item-link" href="#"><b>Notion Templates</b></a>
+        <li class="notion-templates__item item-link--bold">
+          <a class="item-link" href="#">Notion Templates</a>
         </li>
         <li class="notion-templates__item">
           <a class="item-link" href="#">Notion Second Brain</a>
