@@ -104,19 +104,17 @@ body {
     border-bottom: solid 3px var(--color-foreground);
 }
 
-.nav__item:nth-child(-n+3)::after {
+.link-item {
+    text-decoration: none;
+    color: var(--color-background-alt);
+}
+
+.sub-menu__arrow::after {
     content: "⏷";
     display: inline-block;
     vertical-align: middle;
     margin-left: 5px;
  }
-
-.nav__item:nth-child(5)::after {
-    content: "⏷";
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 5px;
-}
 
 .nav__sub-menu {
     position: absolute;
